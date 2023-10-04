@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool gameOver;
+
+    private void Start()
     {
-        
+        setGameOver(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public bool getGameOver()
     {
-        
+        return gameOver;
+    }
+
+    public void setGameOver(bool g)
+    {
+        gameOver = g;
+        evaluateGameState();
+    }
+
+    public void evaluateGameState()
+    {
+        if (gameOver)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
     }
 }
