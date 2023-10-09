@@ -25,7 +25,8 @@ public class GameOverMenu : MonoBehaviour
         //if game is over, show game over menu
         if(gm.getGameOver() == true)
         {
-            showGameOverMenu();
+            //showGameOverMenu();
+            gameOverMenu.SetActive(true);
         }
     }
 

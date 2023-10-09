@@ -32,6 +32,7 @@ public class Timer : MonoBehaviour
         time -= Time.deltaTime;
 
         updateGUITime();
+
         if(timeUp())
         {
             gm.setGameOver(true);
