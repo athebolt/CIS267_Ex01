@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         numJumps = 1;
         maxNumJumps = 1;
 
-        gm = gameManager.AddComponent<GameManager>();
+        gm = gameManager.GetComponent<GameManager>();
     }
 
     // Update is called once per frame

@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         gm = gameManager.GetComponent<GameManager>();
-        time = 20;
+        time = 5;
         guiTime = GetComponent<TMP_Text>();
         updateGUITime();
     }

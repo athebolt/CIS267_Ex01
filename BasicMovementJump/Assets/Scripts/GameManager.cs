@@ -5,9 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private bool gameOver;
+    public GameObject player;
+    public PlayerScore playerScore;
 
     private void Start()
     {
+        playerScore = player.GetComponent<PlayerScore>();
+        Debug.Log(playerScore.getScore());
+        //Debug.Log("High Score " + SaveData.loadScore());
         setGameOver(false);
     }
 
@@ -26,6 +31,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameOver)
         {
+            //SaveData.saveScore(playerScore.getScore());
             Time.timeScale = 0f;
         }
         else
